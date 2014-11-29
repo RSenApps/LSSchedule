@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LSSchedule</string>
+    <string name="setup">Setup</string>
+    <string name="edit">Edit Day</string>
+    <string name="markToday">Switch Schedule</string>
+    <string name="report">Report Issue</string>
+    <string name="reportCondensed">Report</string>
+    <string name="settings">Settings</string>
+
+</resources>

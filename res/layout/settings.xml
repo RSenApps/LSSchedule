@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="Notification"
+        android:title="Notification" >
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="Enable_Notifications"
+            android:summary="Quick way to see next class..."
+            android:title="Enable Notifications" >
+        </CheckBoxPreference>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="Enable_Notifications"
+            android:key="Notification_show_frees"
+            android:summary="Always show the notification during frees..."
+            android:title="Notifications during frees" >
+        </CheckBoxPreference>
+
+        <ListPreference
+            android:defaultValue="5"
+            android:dependency="Enable_Notifications"
+            android:entries="@array/notificationShowTimes"
+            android:entryValues="@array/notificationShowTimeValues"
+            android:key="Notification_show_time"
+            android:summary="How long before the class, will a notification show..."
+            android:title="Notification show time" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="Vibrate"
+        android:title="Vibrate" >
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="Enable_Notifications"
+            android:key="Notification_vibrate"
+            android:summary="Vibrate when a class ends..."
+            android:title="Vibrate" >
+        </CheckBoxPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="RingVolume"
+        android:title="Ring Volume" >
+
+        <ListPreference
+            android:defaultValue="Keep Unchanged"
+            android:entries="@array/ringVolumeOptions"
+            android:entryValues="@array/ringVolumeOptions"
+            android:key="Ring_Volume_Class_Start"
+            android:summary="What to set the ring volume when a class starts"
+            android:title="Ring Volume During Class" />
+
+
+        <ListPreference
+            android:defaultValue="Keep Unchanged"
+            android:entries="@array/ringVolumeOptions"
+            android:entryValues="@array/ringVolumeOptions"
+            android:key="Ring_Volume_Class_End"
+            android:summary="What to set the ring volume when a class ends"
+            android:title="Ring Volume After Class" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinear"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res/com.Rsen.LSSchedule">
+
+    <com.viewpagerindicator.TitlePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content" />
+
+ 
+<com.tapfortap.AdView android:id="@+id/ad_view"
+                          android:layout_height="50dip"
+                          android:layout_width="fill_parent"
+                          android:layout_gravity="bottom"
+                          android:layout_alignParentBottom="true"
+                          />
+   <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/indicator"
+        android:layout_above="@id/ad_view" />
+</RelativeLayout>
